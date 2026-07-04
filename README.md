@@ -29,3 +29,15 @@ pip install -r requirements.txt
 ```
 
 2. 配置环境变量，新建 `.env` 文件：
+
+   ```
+   API_KEY=你的DeepSeek API Key
+   ZHIPU_API_KEY=你的智谱AI API Key
+   ```
+
+3. 启动服务
+```bash
+uvicorn main:app --reload
+```
+
+4. 访问 `http://127.0.0.1:8000/docs` 测试接口
