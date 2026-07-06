@@ -41,3 +41,32 @@ uvicorn main:app --reload
 ```
 
 4. 访问 `http://127.0.0.1:8000/docs` 测试接口
+
+```
+                PDF
+                 │
+                 ▼
+           PyMuPDF 提取文本
+                 │
+                 ▼
+            文本切片 Chunk
+                 │
+                 ▼
+      智谱 Embedding 向量化
+                 │
+                 ▼
+          Chroma 向量数据库
+                 ▲
+                 │
+用户问题 ──► Embedding
+                 │
+                 ▼
+         Top-K 相似检索
+                 │
+                 ▼
+ Context + Question
+                 │
+                 ▼
+      DeepSeek 生成回答
+```
+
